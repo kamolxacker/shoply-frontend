@@ -1,0 +1,253 @@
+/* index.css — index sahifasi uchun alohida stillar. Umumiy stillar base.css da. */
+
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  padding: 48px 56px;
+  max-width: 560px;
+}
+
+
+.hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+
+.hero__eyebrow-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-gold);
+}
+
+
+.hero__title {
+  font-size: 42px;
+  line-height: 1.12;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+
+.hero__text {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.82);
+  margin-bottom: 26px;
+  max-width: 440px;
+}
+
+
+.hero__actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+
+.hero__price-tag {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--color-primary-darker);
+  background: var(--color-gold);
+  padding: 12px 18px;
+  border-radius: var(--radius-md);
+}
+
+
+.hero__dots {
+  position: absolute;
+  bottom: 20px;
+  left: 56px;
+  z-index: 3;
+  display: flex;
+  gap: 8px;
+}
+
+
+.hero__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.4);
+  transition: background .15s ease, width .15s ease;
+}
+
+
+.hero__dot--active {
+  background: var(--color-gold);
+  width: 22px;
+  border-radius: var(--radius-full);
+}
+
+
+.btn--outline {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+}
+
+
+.btn--outline:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+
+.section__link {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+
+.section__link:hover {
+  color: var(--color-primary-dark);
+}
+
+
+/* category-grid */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+}
+
+
+.category-grid__item {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 20px 12px;
+  text-align: center;
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+
+
+.category-grid__item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary);
+}
+
+
+.category-grid__icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  background: var(--color-primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+
+.category-grid__name {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+
+/* promo-banners */
+.promo-banners {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+
+.promo-banners__item {
+  border-radius: var(--radius-lg);
+  padding: 28px 30px;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.promo-banners__title {
+  font-size: 20px;
+  font-weight: 700;
+  max-width: 260px;
+}
+
+
+.promo-banners__text {
+  font-size: 13.5px;
+  opacity: 0.85;
+  max-width: 260px;
+}
+
+
+/* RESPONSIVE */
+/* planshet */
+@media (max-width: 1100px) {
+
+
+  .category-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
+/* kichik planshet / katta telefon */
+@media (max-width: 860px) {
+
+
+  .promo-banners {
+    grid-template-columns: 1fr;
+  }
+
+
+  .hero__content {
+    padding: 34px 26px;
+    max-width: 100%;
+  }
+
+
+  .hero__title {
+    font-size: 30px;
+  }
+
+
+  .category-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/* telefon */
+@media (max-width: 560px) {
+
+
+  .category-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+
+  .hero__title {
+    font-size: 25px;
+  }
+}

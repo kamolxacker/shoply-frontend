@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil — Shoply</title>
+  <script>(function(){try{if(localStorage.getItem("ss_theme")==="dark")document.documentElement.setAttribute("data-theme","dark");}catch(e){}})();</script>
+  <link rel="icon" type="icon" href="./images/icons/icon.svg">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/profile.css">
+</head>
+
+<body>
+
+  <!-- header -->
+  <div id="header-mount"></div>
+
+  <main class="container profile">
+    <h1 class="profile__name" id="profile-name">Profil</h1>
+
+    <!-- mehmon (tizimga kirmagan) -->
+    <div class="profile-guest" id="profile-guest" hidden>
+      <h2 class="profile-empty__title" id="guest-title">Profilga kirish</h2>
+      <p id="guest-text">Buyurtmalaringiz va sevimlilaringizni ko'rish uchun tizimga kiring.</p>
+      <button type="button" class="btn btn--solid" data-login-open id="guest-btn">Kirish</button>
+    </div>
+
+    <!-- tizimga kirgan foydalanuvchi -->
+    <div class="profile__layout" id="profile-app" hidden>
+      <aside class="profile__nav" id="profile-nav"></aside>
+      <section class="profile__content" id="profile-content"></section>
+    </div>
+  </main>
+
+  <!-- footer -->
+  <div id="footer-mount"></div>
+
+  <!-- skriptlar -->
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/lang-links.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/popups.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+
+</html>

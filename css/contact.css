@@ -1,0 +1,12 @@
+/* contact.css — contact sahifasi uchun alohida stillar. Umumiy stillar base.css da. */
+
+.contact-main { max-width: 720px; }
+
+.contact-title { margin-bottom: 8px; }
+
+.contact-lead { color: var(--color-text-soft); margin-bottom: 26px; }
+
+.contact-form {
+  background: var(--color-surface); border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg); padding: 26px; margin-bottom: 36px;
+}

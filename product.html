@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mahsulot — Sotuv Sayti</title>
+  <script>(function(){try{if(localStorage.getItem("ss_theme")==="dark")document.documentElement.setAttribute("data-theme","dark");}catch(e){}})();</script>
+  <link rel="icon" type="icon" href="./images/icons/icon.svg">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/product.css">
+</head>
+
+<body>
+
+  <!-- header -->
+  <div id="header-mount"></div>
+
+  <main class="container">
+    <!-- yo'l izi (breadcrumbs) -->
+    <div class="breadcrumbs">
+      <a class="breadcrumbs__link" href="index.html" id="crumb-home">Bosh sahifa</a> <span>/</span>
+      <a class="breadcrumbs__link" href="catalog.html" id="crumb-cat">Kategoriya</a> <span>/</span>
+      <span id="crumb-name">Mahsulot</span>
+    </div>
+
+    <!-- mahsulot ma'lumotlari -->
+    <div id="product-mount"></div>
+    <!-- /mahsulot ma'lumotlari -->
+
+    <!-- o'xshash mahsulotlar -->
+    <section class="section">
+      <div class="section__head">
+        <div>
+          <span class="section__eyebrow" id="similar-eyebrow">O'xshash mahsulotlar</span>
+          <h2 class="section__title" id="similar-title">Sizga yoqishi mumkin</h2>
+        </div>
+      </div>
+      <div id="similar-mount"></div>
+    </section>
+    <section class="section product-reviews">
+      <h2 class="section__title">Sharhlar</h2>
+      <div id="reviews-mount"></div>
+    </section>
+  </main>
+
+  <!-- footer -->
+  <div id="footer-mount"></div>
+
+  <!-- skriptlar -->
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/lang-links.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/popups.js"></script>
+  <script src="js/product.js"></script>
+  <script src="js/reviews.js"></script>
+</body>
+
+</html>

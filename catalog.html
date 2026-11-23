@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katalog — Shoply</title>
+  <script>(function(){try{if(localStorage.getItem("ss_theme")==="dark")document.documentElement.setAttribute("data-theme","dark");}catch(e){}})();</script>
+  <link rel="icon" type="icon" href="./images/icons/icon.svg">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/catalog.css">
+</head>
+
+<body>
+
+  <!-- header -->
+  <div id="header-mount"></div>
+
+  <main class="container">
+    <!-- yo'l izi (breadcrumbs) -->
+    <div class="breadcrumbs">
+      <a class="breadcrumbs__link" href="index.html" id="crumb-home">Bosh sahifa</a> <span>/</span> <span
+        id="catalog-title">Katalog</span>
+    </div>
+
+    <!-- filtr paneli + mahsulotlar ro'yxati -->
+    <div class="catalog__layout">
+      <aside class="filters" id="filters-mount"></aside>
+      <!-- /filtr paneli -->
+
+      <div>
+        <div class="catalog__toolbar">
+          <span class="catalog__result-count" id="result-count"></span>
+          <select class="catalog__sort-select" id="sort-select"></select>
+        </div>
+        <div class="catalog__chips" id="chips-mount"></div>
+        <div id="results-mount"></div>
+        <!-- /mahsulotlar ro'yxati -->
+      </div>
+    </div>
+  </main>
+
+  <!-- footer -->
+  <div id="footer-mount"></div>
+
+  <!-- skriptlar -->
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/lang-links.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/popups.js"></script>
+  <script src="js/catalog.js"></script>
+</body>
+
+</html>

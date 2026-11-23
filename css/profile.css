@@ -1,0 +1,217 @@
+/* ==========================================================================
+   SHOPLY — Profil sahifasi (Uzum uslubidagi chap menyu + kontent)
+   ========================================================================== */
+
+.profile { padding-top: 28px; padding-bottom: 48px; }
+
+.profile__name {
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0 0 28px;
+  color: var(--color-text);
+}
+
+.profile__layout[hidden], .profile-guest[hidden] { display: none !important; }
+
+.profile__layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+/* chap menyu */
+.profile__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: sticky;
+  top: 16px;
+}
+.profile-nav__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  text-align: left;
+  transition: background .15s;
+}
+.profile-nav__item:hover { background: var(--color-primary-light); }
+.profile-nav__item--active { background: var(--color-primary-light); color: var(--color-primary-dark); font-weight: 600; }
+.profile-nav__dot {
+  margin-left: auto;
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--color-primary);
+}
+
+/* o'ng kontent */
+.profile__content {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  min-height: 420px;
+}
+
+.profile-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.profile-tab {
+  border: 0;
+  padding: 9px 16px;
+  border-radius: var(--radius-full);
+  background: var(--color-bg);
+  color: var(--color-text-soft);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.profile-tab--active { background: var(--color-text); color: var(--color-surface); }
+
+.profile-section-title {
+  font-family: var(--font-display);
+  font-size: 20px;
+  margin: 0 0 16px;
+  color: var(--color-text);
+}
+
+/* buyurtma kartochkasi */
+.order-card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  margin-bottom: 14px;
+}
+.order-card__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.order-card__date { color: var(--color-text-faint); font-size: 13px; margin-left: 8px; }
+.order-badge {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: var(--radius-full);
+  background: var(--color-primary-light);
+  color: var(--color-primary-dark);
+}
+.order-badge--unpaid { background: var(--color-coral-light); color: var(--color-coral); }
+.order-badge--delivered { background: #E3F5EA; color: var(--color-success); }
+
+.order-card__items { list-style: none; padding: 0; margin: 0 0 12px; display: grid; gap: 10px; }
+.order-card__item { display: flex; align-items: center; gap: 12px; font-size: 14px; }
+.order-card__media {
+  position: relative; display: block;
+  width: 52px; height: 52px; flex-shrink: 0;
+  border-radius: var(--radius-sm); overflow: hidden;
+  background: var(--color-bg);
+}
+.order-card__thumb { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* rasm yo'q bo'lsa — kichik placeholder (sahifani to'ldirib yubormasligi uchun) */
+.order-card__media .img-placeholder {
+  position: absolute !important; inset: 0 !important;
+  width: 100% !important; height: 100% !important;
+  border-radius: var(--radius-sm); min-height: 0 !important;
+}
+.order-card__media .img-placeholder__label { display: none; }
+.order-card__media .img-placeholder__icon { width: 22px; height: 22px; }
+.order-card__name { flex: 1; color: var(--color-text); }
+.order-card__qty { color: var(--color-text-faint); white-space: nowrap; }
+
+.order-card__foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  border-top: 1px solid var(--color-border);
+  padding-top: 12px;
+}
+.order-card__total { font-weight: 700; font-family: var(--font-mono); color: var(--color-text); }
+
+.order-like {
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+  border-radius: var(--radius-full);
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.order-like.is-liked { border-color: var(--color-coral); color: var(--color-coral); background: var(--color-coral-light); }
+
+/* bo'sh holat (Uzum uslubida) */
+.profile-empty { text-align: center; padding: 56px 16px; }
+.profile-empty__title {
+  font-family: var(--font-display);
+  font-size: 30px;
+  color: var(--color-text-faint);
+  margin: 0 0 14px;
+}
+.profile-empty p { margin: 0 0 6px; color: var(--color-text); font-size: 15px; }
+.profile-empty .btn { margin-top: 22px; }
+.profile-empty__link { display: inline-block; margin-top: 18px; color: var(--color-text); font-weight: 600; }
+
+.profile-guest {
+  text-align: center;
+  padding: 56px 16px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+/* ma'lumotlar */
+.profile-info { display: grid; gap: 14px; max-width: 480px; }
+.profile-info__row { display: flex; justify-content: space-between; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--color-border); }
+.profile-info__label { color: var(--color-text-faint); font-size: 14px; }
+.profile-info__value { font-weight: 600; color: var(--color-text); }
+
+/* promokodlar */
+.promo-list { display: grid; gap: 12px; }
+.promo-card {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  border: 1px dashed var(--color-primary);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  background: var(--color-primary-light);
+}
+.promo-card__code { font-family: var(--font-mono); font-size: 18px; font-weight: 700; color: var(--color-primary-dark); letter-spacing: .04em; }
+.promo-card__title { font-weight: 700; color: var(--color-text); margin-top: 4px; }
+.promo-card__desc { font-size: 13px; color: var(--color-text-soft); margin-top: 2px; }
+.promo-card__copy {
+  border: 0; background: var(--color-primary); color: #fff;
+  padding: 10px 16px; border-radius: var(--radius-full); font-weight: 600; cursor: pointer;
+}
+
+.cart-mini-row { display: flex; justify-content: space-between; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--color-border); font-size: 14px; }
+.cart-mini-total { display: flex; justify-content: space-between; align-items: center; margin-top: 18px; font-weight: 700; }
+
+.profile-recos { margin-top: 28px; }
+
+@media (max-width: 860px) {
+  .profile__layout { grid-template-columns: 1fr; }
+  .profile__nav {
+    flex-direction: row; overflow-x: auto; position: static;
+    padding-bottom: 6px; gap: 6px;
+  }
+  .profile-nav__item { white-space: nowrap; padding: 10px 14px; font-size: 14px; }
+  .profile__content { padding: 16px; }
+  .profile__name { font-size: 24px; }
+}

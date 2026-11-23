@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sotuvchi kabineti — Shoply</title>
+  <script>(function(){try{if(localStorage.getItem("ss_theme")==="dark")document.documentElement.setAttribute("data-theme","dark");}catch(e){}})();</script>
+  <link rel="icon" type="icon" href="./images/icons/icon.svg">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/seller.css">
+</head>
+
+<body>
+  <div id="header-mount"></div>
+
+  <main class="container profile seller">
+    <h1 class="profile__name" id="seller-name">Sotuvchi kabineti</h1>
+
+    <!-- sotuvchi emas / kirmagan -->
+    <div class="profile-guest" id="seller-guest" hidden>
+      <h2 class="profile-empty__title">Sotuvchi kabineti</h2>
+      <p>Buyurtmalarni boshqarish, sharhlarga javob berish va daromadni ko'rish uchun sotuvchi hisobiga kiring.</p>
+      <button type="button" class="btn btn--solid" data-open-seller>Sotuvchi sifatida kirish</button>
+    </div>
+
+    <div class="profile__layout" id="seller-app" hidden>
+      <aside class="profile__nav" id="seller-nav">
+        <a class="profile-nav__item" href="#orders" data-nav="orders">📦 Buyurtmalar</a>
+        <a class="profile-nav__item" href="#products" data-nav="products">🛍️ Mahsulotlar</a>
+        <a class="profile-nav__item" href="#reviews" data-nav="reviews">💬 Sharhlar</a>
+        <a class="profile-nav__item" href="#stats" data-nav="stats">📈 Reyting va daromad</a>
+        <button type="button" class="profile-nav__item" id="seller-logout">🚪 Chiqish</button>
+      </aside>
+      <section class="profile__content" id="seller-content"></section>
+    </div>
+  </main>
+
+  <div id="footer-mount"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/lang-links.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/popups.js"></script>
+  <script src="js/seller.js"></script>
+</body>
+
+</html>

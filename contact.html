@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Savol-javob — Sotuv Sayti</title>
+  <script>(function(){try{if(localStorage.getItem("ss_theme")==="dark")document.documentElement.setAttribute("data-theme","dark");}catch(e){}})();</script>
+  <link rel="icon" type="icon" href="./images/icons/icon.svg">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+
+<body>
+
+  <!-- header -->
+  <div id="header-mount"></div>
+
+  <main class="container contact-main">
+    <!-- yo'l izi (breadcrumbs) -->
+    <div class="breadcrumbs">
+      <a class="breadcrumbs__link" href="index.html" id="crumb-home">Bosh sahifa</a> <span>/</span>
+      <span>Savol-javob</span>
+    </div>
+
+    <h1 class="section__title contact-title">Savolingiz bormi?</h1>
+    <p class="contact-lead">Quyidagi formani to'ldiring — bizning jamoamiz tez orada
+      javob beradi.</p>
+
+    <!-- so'rov yuborish formasi -->
+    <form data-inquiry-form class="contact-form">
+      <div class="form-field">
+        <label class="form-field__label">Ismingiz</label>
+        <input type="text" class="form-field__input" required data-f-name>
+      </div>
+      <div class="form-field">
+        <label class="form-field__label">Telefon raqam</label>
+        <input type="tel" class="form-field__input" placeholder="+998 90 123 45 67" required data-f-phone>
+      </div>
+      <div class="form-field">
+        <label class="form-field__label">Savolingiz</label>
+        <textarea class="form-field__input" rows="4" required data-f-message></textarea>
+        <div class="form-field__error" data-form-error></div>
+      </div>
+      <button type="submit" class="btn btn--primary btn--lg">So'rovni yuborish</button>
+    </form>
+    <!-- /so'rov yuborish formasi -->
+
+    <!-- avval yuborilgan so'rovlar va javoblar -->
+    <div id="my-inquiries-mount"></div>
+    <!-- /avval yuborilgan so'rovlar -->
+  </main>
+
+  <!-- footer -->
+  <div id="footer-mount"></div>
+
+  <!-- skriptlar -->
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/lang-links.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/popups.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+
+</html>

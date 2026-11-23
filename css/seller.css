@@ -1,0 +1,27 @@
+/* ==========================================================================
+   SHOPLY — Sotuvchi kabineti (profile.css uslubi asosida)
+   ========================================================================== */
+@import url("profile.css");
+
+.seller .profile__name { margin-bottom: 20px; }
+.seller-section-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
+.seller-order { border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 16px; margin-bottom: 14px; }
+.seller-order__head { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
+.seller-order__line { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 0; border-top: 1px solid var(--color-border); flex-wrap: wrap; }
+.seller-order__actions { display: flex; gap: 6px; flex-wrap: wrap; }
+.seller-btn { border: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-text); padding: 7px 12px; border-radius: var(--radius-full); font-size: 13px; font-weight: 600; cursor: pointer; }
+.seller-btn--primary { background: var(--color-primary); color: #fff; border-color: var(--color-primary); }
+.seller-btn--danger { color: var(--color-coral); border-color: var(--color-coral); }
+.seller-status { font-size: 12px; font-weight: 700; padding: 4px 9px; border-radius: var(--radius-full); background: var(--color-primary-light); color: var(--color-primary-dark); }
+.seller-status--delivered { background: #E3F5EA; color: var(--color-success); }
+.seller-status--rejected { background: var(--color-coral-light); color: var(--color-coral); }
+.seller-form { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; max-width: 760px; }
+.seller-form .wide { grid-column: 1 / -1; }
+.seller-gallery { display: flex; gap: 8px; flex-wrap: wrap; }
+.seller-gallery img { width: 72px; height: 72px; object-fit: cover; border-radius: var(--radius-sm); border: 1px solid var(--color-border); }
+.stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; }
+.stat-card { border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 16px; background: var(--color-bg); }
+.stat-card__label { font-size: 12px; color: var(--color-text-faint); text-transform: uppercase; letter-spacing: .05em; }
+.stat-card__value { font-size: 22px; font-weight: 800; margin-top: 6px; font-family: var(--font-mono); color: var(--color-text); }
+.stat-card--accent { background: var(--color-primary-light); border-color: var(--color-primary); }
+@media (max-width: 640px) { .seller-form { grid-template-columns: 1fr; } }

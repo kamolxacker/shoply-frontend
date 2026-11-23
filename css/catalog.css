@@ -1,0 +1,219 @@
+/* catalog.css — catalog sahifasi uchun alohida stillar. Umumiy stillar base.css da. */
+
+
+/* filters */
+.catalog__layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+
+.filters__block {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+
+.filters__block:first-child {
+  padding-top: 0;
+}
+
+
+.filters__block:last-child {
+  border-bottom: none;
+}
+
+
+.filters__title {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+
+.filters__price-inputs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+
+.filters__price-inputs input {
+  width: 100%;
+  padding: 9px 10px;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-family: var(--font-mono);
+}
+
+
+.filters__checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 6px 0;
+  font-size: 13.5px;
+  color: var(--color-text-soft);
+  cursor: pointer;
+}
+
+
+.filters__checkbox-row input {
+  width: 17px;
+  height: 17px;
+  accent-color: var(--color-primary);
+}
+
+
+.filters__checkbox-count {
+  margin-left: auto;
+  color: var(--color-text-faint);
+  font-size: 12px;
+}
+
+
+.filters__star-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+
+.filters__star-option {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  color: var(--color-text-soft);
+}
+
+
+.filters__star-option input {
+  accent-color: var(--color-primary);
+}
+
+
+/* catalog */
+.catalog__toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+
+.catalog__chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  font-size: 12.5px;
+  font-weight: 700;
+}
+
+
+.catalog__chip-remove {
+  background: none;
+  border: none;
+  color: inherit;
+  display: flex;
+}
+
+
+/* pagination */
+.pagination {
+  margin-top: 26px;
+}
+
+
+.pagination__more {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: var(--radius-md);
+  background: var(--color-border);
+  color: var(--color-text);
+  font-weight: 700;
+  font-size: 14.5px;
+  margin-bottom: 22px;
+  transition: background .15s ease;
+}
+
+
+.pagination__more:hover {
+  background: #d7ddd9;
+}
+
+
+.pagination__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+
+.pagination__arrow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 14px;
+  border: none;
+  background: none;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-soft);
+}
+
+
+.pagination__arrow:hover:not(:disabled) {
+  color: var(--color-primary-dark);
+  background: var(--color-primary-light);
+}
+
+
+.pagination__arrow:disabled {
+  color: var(--color-text-faint);
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+.pagination__ellipsis {
+  color: var(--color-text-faint);
+  padding: 0 4px;
+}
+
+
+/* RESPONSIVE */
+/* planshet */
+@media (max-width: 1100px) {
+
+
+  .catalog__layout {
+    grid-template-columns: 220px 1fr;
+  }
+}
+
+
+/* kichik planshet / katta telefon */
+@media (max-width: 860px) {
+
+
+  .catalog__layout {
+    grid-template-columns: 1fr;
+  }
+}
