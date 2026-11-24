@@ -25,7 +25,7 @@ function setToken(token){
 
 // backend'ga so'rov yuborish (umumiy wrapper)
 async function apiRequest(pathname, { method = "GET", body } = {}){
-  const headers = { "Content-Type": "application/json", "X-Session-Id": getSessionId() };
+  const headers = { "Content-Type": "application/json", "X-Session-Id": getSessionId(), "ngrok-skip-browser-warning": "1" };
   const token = getToken();
   if(token) headers["Authorization"] = `Bearer ${token}`;
 
